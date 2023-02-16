@@ -36,12 +36,16 @@ public class Job {
     }
 
     public String getName() {
-        return name;
-    }
+       return name;
+        }
+
+
 
     public void setName(String name) {
-        this.name = name;
-    }
+
+            this.name = name;
+
+        }
 
     public Employer getEmployer() {
         return employer;
@@ -75,7 +79,21 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
-//    public String toString() { return value;}
+    public String toString() {
+        if (name.equals("")) {
+            name = "Data not available";
+        } else {
+
+
+        }
+        return  "\nID: " + id +
+                "\nName: " + name +
+                "\nEmployer: " + employer.toString() +
+                "\nLocation: " +location.toString() +
+                "\nPosition Type: " + positionType.toString() +
+                "\nCore Competency: " + coreCompetency.toString()+"\n";
+    }
+
 
 
     @Override

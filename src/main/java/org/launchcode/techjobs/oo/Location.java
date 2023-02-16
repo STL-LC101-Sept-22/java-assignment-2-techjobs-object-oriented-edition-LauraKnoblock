@@ -2,17 +2,17 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
-public class Location extends Job {
+public class Location extends JobField {
 
 
     private int id;
     private static int nextId = 1;
     private String value;
 
-    public Location() {
-        id = nextId;
-        nextId++;
-    }
+//    public Location() {
+//        id = nextId;
+//        nextId++;
+//    }
 
 
     // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The
@@ -21,40 +21,42 @@ public class Location extends Job {
 
     // Custom toString, equals, and hashCode methods:
     public Location(String value) {
-        this.value = value;
-        this.id = nextId;
-        nextId++;
+        super(value);
     }
-    @Override
-    public String toString() {
-        return value;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Location)) return false;
-        Location location = (Location) o;
-        return getId() == location.getId();
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
-
-    // Getters and Setters:
-
-    public int getId() {
-        return id;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
 }
+//    @Override
+//    public String toString() {
+//        if (value.equals("")) {
+//            value = "Data not available";
+//        }
+//        return value;
+//    }
+//
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (!(o instanceof Location)) return false;
+//        Location location = (Location) o;
+//        return getId() == location.getId();
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(getId());
+//    }
+//
+//    // Getters and Setters:
+//
+//    public int getId() {
+//        return id;
+//    }
+//
+//    public String getValue() {
+//        return value;
+//    }
+//
+//    public void setValue(String value) {
+//        this.value = value;
+//    }
+//
+//}
